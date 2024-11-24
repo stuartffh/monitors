@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Player Online Status</h1>
+        <div id="status" class="loading">Connecting to WebSocket...</div>
+
+        <!-- Guild Selection Section -->
+        <div id="guildFilter">
+            <h2>Select Guilds to Display</h2>
+            <div id="guildCheckboxContainer">
+                <!-- Guild checkboxes will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Guild Display Section -->
+        <div id="guilds">
+            <!-- Guild data will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <script src="frontend.js"></script>
+</body>
+</html>

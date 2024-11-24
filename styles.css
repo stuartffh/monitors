@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    overflow-x: hidden; /* Remove rolagem horizontal desnecessária */
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 100%; /* Garante que o container use 100% da largura */
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Status Message */
+#status {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Guild Checkbox Container */
+#guildCheckboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #1e1e1e;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Guilds Display */
+#guilds {
+    display: flex;
+    flex-wrap: nowrap; /* Garante que todas as guilds fiquem em uma única linha */
+    gap: 10px;
+    overflow-x: auto; /* Habilita rolagem horizontal */
+    padding-bottom: 10px; /* Espaço extra para evitar esconder conteúdo na borda inferior */
+}
+
+#guilds::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+}
+
+#guilds::-webkit-scrollbar-thumb {
+    background: #555; /* Cor do "polegar" da rolagem */
+    border-radius: 4px;
+}
+
+#guilds::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Cor ao passar o mouse */
+}
+
+#guilds::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Cor do fundo da barra de rolagem */
+}
+
+/* Guild Box */
+.guild {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    flex: 0 0 auto; /* Garante que cada guild tenha largura fixa e não encolha */
+    min-width: 300px; /* Define largura mínima para cada box */
+    max-width: 300px; /* Define largura máxima para cada box */
+    transition: transform 0.2s ease-in-out;
+}
+
+.guild:hover {
+    transform: scale(1.03);
+}
+
+/* Guild Title */
+.guild h2 {
+    color: #f0db4f;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #2a2a2a;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #f0f0f0;
+}
+
+tbody td {
+    padding: 6px;
+    border: 1px solid #444;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #ddd;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .guild h2 {
+        font-size: 0.9rem;
+    }
+
+    thead th,
+    tbody td {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .guild h2 {
+        font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+        font-size: 0.6rem;
+    }
+}
