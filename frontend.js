@@ -4,7 +4,7 @@ const socket = io("https://www.exiva.com.br", {
     query: {
         token: "null",
         info: JSON.stringify({
-            ip: "18.229.137.138",
+            ip: "18.222.137.132",
             hostname: "ec2-18-229-137-138.sa-east-1.compute.amazonaws.com",
             city: "São Paulo",
             region: "São Paulo",
